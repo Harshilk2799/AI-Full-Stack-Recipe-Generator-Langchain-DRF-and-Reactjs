@@ -25,7 +25,7 @@ An intelligent recipe generator that uses AI to generate complete recipes based 
 
 ### 📥 Recipe Input & Output
 
-- `POST /api/recipes/` – Generate more information such as ingredients, instructions, meal type and so on using recipe name.
+- `POST /api/recipe/` – Generate more information such as ingredients, instructions, meal type and so on using recipe name.
 
 ---
 
@@ -40,20 +40,6 @@ source env/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
-
-
-### 🥗 AI-Powered Recipe Generation
-
-- **Input**: User provides a **recipe name**
-- **AI Output**: Predicts and returns:
-  - Difficulty Level (Easy/Medium/Hard)
-  - Spice Level (Mild/Medium/Spicy)
-  - Meal Type (Breakfast/Lunch/Dinner/Snack)
-  - List of Ingredients
-  - Step-by-step Cooking Instructions
-- **Extras**: Options to save, regenerate, or start over
-
-```
 
 ### Recipe Simple Form
 
