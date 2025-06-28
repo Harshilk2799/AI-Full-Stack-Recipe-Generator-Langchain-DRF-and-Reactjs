@@ -9,7 +9,7 @@ class RecipeAPI(APIView):
         serializer = RecipeSerializer(data = request.data)
         if serializer.is_valid():
             recipe = serializer.save()
-            obj = recipe_generate(serializer.data.get("recipe_title"))
+            obj = recipe_generate(serializer.validated_data.get("recipe_title"))
 
             recipe.ingredients = obj["ingredients"]
             print("Ingredients: ", obj["ingredients"])
